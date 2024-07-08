@@ -3,21 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
-
 html {
   block-size: 100%;
 }
-
-.page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
-}
-
 h1,
 h2,
 h3,
@@ -31,8 +19,294 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-
+.page {
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+}
 ul,
 ol {
   list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.content {
+  padding-top: 133px;
+  width: 1140px;
+  height: 534px;
+  gap: 30px;
+  display: flex;
+}
+.result {
+  padding-top: 78px;
+}
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  position: relative;
+}
+.result__video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.result__video:focus {
+  outline: none;
+}
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  gap: 40px;
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  grid-row: 4/5;
+}
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  gap: 3px;
+}
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Fira Sans Condensed;
+  line-height: 21.6px;
+  height: 22px;
+  margin-bottom: 2px;
+}
+.search-form__label {
+  cursor: pointer;
+  display: flex;
+  height: 19px;
+  align-items: center;
+  inline-size: 225px;
+  gap: 5px;
+}
+.search-form__label:focus {
+  border: none;
+  outline: none;
+}
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+.search-form__label-text {
+  background-color: #1b1919;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.search-form__textfield {
+  cursor: pointer;
+  background-color: #1b1919;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  max-width: 225px;
+  width: 100%;
+  min-height: 27px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0;
+  appearance: none;
+  color: #fff;
+}
+.search-form__textfield:active {
+  outline: 1px solid #fff;
+}
+.search-form__textfield:hover {
+  cursor: text;
+}
+.search-form__textfield:focus {
+  border: none;
+}
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  background-color: #1b1919;
+  border: none;
+  width: 212px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0;
+}
+.search-form__checkbox[type="checkbox"]:checked + span::after {
+  content: "";
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+}
+.search-form__pseudo-checkbox {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  vertical-align: text-bottom;
+  border: 1px solid #fff;
+  background-color: #1b1919;
+}
+.search-form__pseudo-checkbox:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+.search-form__label:hover .search-form__label-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.button {
+  cursor: pointer;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #1b1919;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.button:active {
+  background-color: #545050;
+}
+.button:focus {
+  outline: none;
+}
+button:hover {
+  text-decoration: underline 1px #fff;
+}
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+  align-self: end;
+}
+.content__details {
+  height: 100%;
+  width: 399px;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+.title {
+  margin-block-end: 26px;
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+}
+.content__accent {
+  color: #545050;
+}
+.content__list {
+  position: relative;
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  width: 404px;
+  height: 308px;
+  padding: 0 0 1px 1px;
+}
+.content__list-item:not(:last-child) {
+  padding-bottom: 22px;
+}
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 2px;
+}
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 398px;
+  height: 107px;
+  padding: 2px;
+}
+.content__video-card:focus {
+  outline: none;
+}
+.content__video-card:hover {
+  text-decoration: underline 2px #fff;
+}
+.content__video-card:active {
+  background-color: #545050;
+}
+.content__video-card:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  padding-top: 6px;
+}
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+.more-button {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  width: 397px;
+  height: 34px;
+  gap: 10px;
+  opacity: 0px;
+  border: 1px solid white;
+  color: white;
+  background-color: rgb(24, 24, 24);
+}
+.more-button:focus {
+  outline: 1px solid #fff;
 }
