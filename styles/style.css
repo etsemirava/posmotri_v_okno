@@ -143,7 +143,6 @@ a {
   appearance: none;
   color: #fff;
 }
-
 .search-form__textfield:active {
   outline: 1px solid #fff;
 }
