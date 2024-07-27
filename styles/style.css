@@ -18,8 +18,13 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: 0 none;
 }
 .page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -33,7 +38,7 @@ ol {
   list-style: none;
 }
 .visually-hidden {
-  position: absolute;
+  position: relative;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
@@ -46,19 +51,30 @@ a {
   text-decoration: none;
 }
 .content {
-  padding-top: 133px;
+  /* padding-top: 133px;
   width: 1140px;
   height: 534px;
   gap: 30px;
+  display: flex; */
   display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 30px;
+  padding: 0;
+  /*margin-block-end: 14px;*/
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 .result {
-  padding-top: 78px;
+  display: grid;
+  padding: 0;
+  position: relative;
 }
 .result__video-container {
-  width: 711px;
-  height: 386px;
   position: relative;
+  inline-size: 711px;
+  block-size: 386px;
+  margin-block-end: 16px;
 }
 .result__video {
   object-fit: cover;
@@ -74,10 +90,11 @@ a {
   align-items: start;
   flex-direction: row;
   gap: 40px;
-  padding-top: 16px;
-  font-size: 18px;
+  height: 54px;
+  /*font-size: 18px;
   font-weight: 400;
   grid-row: 4/5;
+  padding: 0;*/
 }
 .search-form__fieldset {
   display: flex;
@@ -92,14 +109,17 @@ a {
   font-weight: 400;
   font-family: Fira Sans Condensed;
   line-height: 21.6px;
-  height: 22px;
+  /*height: 22px;
+  width: 51.4px;*/
   margin-bottom: 2px;
 }
 .search-form__label {
   cursor: pointer;
   display: flex;
-  height: 19px;
+  flex-direction: row;
+  /*
   align-items: center;
+   */
   inline-size: 225px;
   gap: 5px;
 }
@@ -139,6 +159,7 @@ a {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  line-height: 21.6px;
   padding: 0;
   appearance: none;
   color: #fff;
@@ -204,7 +225,7 @@ a {
   background-color: #545050;
 }
 .button:focus {
-  outline: none;
+  outline: 1px solid #fff;
 }
 button:hover {
   text-decoration: underline 1px #fff;
@@ -213,32 +234,45 @@ button:hover {
   width: 194px;
   height: 34px;
   align-self: end;
+  border: 1px solid #fff;
+}
+.search-form__submit-button:has(:focus-visible) {
+  outline: 1px solid #fff;
 }
 .content__details {
   height: 100%;
+  display: flex;
+  flex-direction: column;
   width: 399px;
   line-height: 0.94;
   text-transform: uppercase;
+  gap: 26px;
 }
 .title {
-  margin-block-end: 26px;
+  /*margin-block-end: 26px;*/
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
 }
 .content__accent {
   color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-transform: uppercase;
 }
 .content__list {
   position: relative;
   overflow-y: scroll;
   scrollbar-width: auto;
-  width: 404px;
-  height: 308px;
-  padding: 0 0 1px 1px;
+  width: 399px;
+  height: 298px;
+  /*padding: 0 0 1px 1px;*/
 }
 .content__list-item:not(:last-child) {
-  padding-bottom: 22px;
+  margin-bottom: 30px;
 }
 .content__card-link {
   display: block;
@@ -273,7 +307,7 @@ button:hover {
 }
 .content__video-card-title {
   font-family: Oswald;
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   color: #ffffff;
